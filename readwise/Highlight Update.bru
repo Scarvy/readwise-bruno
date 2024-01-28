@@ -1,0 +1,21 @@
+meta {
+  name: Highlight Update
+  type: http
+  seq: 14
+}
+
+patch {
+  url: {{baseUrl}}/highlights/:id
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "text": "Delivering good software today is often better than perfect tomorrow. 2"
+  }
+}

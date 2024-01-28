@@ -1,0 +1,11 @@
+meta {
+  name: Book Tag Delete
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{baseUrl}}/books/:id/tags/:tag_id
+  body: none
+  auth: none
+}

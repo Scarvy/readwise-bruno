@@ -1,0 +1,22 @@
+meta {
+  name: Highlights Tag CREATE
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{baseUrl}}/highlights/:highlight_id/tags/
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "name": "philosophy"
+  }
+  
+}

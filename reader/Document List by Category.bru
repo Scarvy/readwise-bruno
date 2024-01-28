@@ -1,0 +1,15 @@
+meta {
+  name: Document List by Category
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/list?category=video
+  body: none
+  auth: none
+}
+
+query {
+  category: video
+}

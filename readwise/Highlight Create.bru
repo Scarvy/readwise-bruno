@@ -1,0 +1,27 @@
+meta {
+  name: Highlight Create
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{baseUrl}}/highlights/
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "highlights": [
+          {
+              "text": "Delivering good software today is often better than perfect tomorrow. 1",
+              "title": "The Pragmatic Programmer",
+              "source_type": "book"
+          }
+      ]
+  }
+}

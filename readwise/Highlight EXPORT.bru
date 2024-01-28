@@ -1,0 +1,21 @@
+meta {
+  name: Highlight EXPORT
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/export
+  body: none
+  auth: none
+}
+
+docs {
+  Parameters:
+  
+  * updatedAfter – (Optional, Formatted as ISO 8601 date) Fetch only highlights updated after this date.
+  * ids – (Optional) Comma-separated list of user_book_ids, returns all highlights for these books only.
+  * pageCursor – (Optional) A string returned by a previous request to this endpoint. Use it to get the next page of books/highlights if there are too many for one request.
+  
+  The recommended way to use this endpoint is to first sync all of a user's historical data by passing no parameters on the first request, then pageCursor until there are no pages left. Then later, if you want to pull newly updated highlights, just pass updatedAfter as the time you last pulled data. This is shown in the examples on the right.
+}
